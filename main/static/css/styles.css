@@ -5,14 +5,7 @@ body {
 	padding: 0;
 }
 
-header {
-	background-color: #333;
-	color: white;
-	padding: 10px;
-}
-
 footer {
-	background-color: #333;
 	color: white;
 	text-align: center;
 	padding: 10px;
@@ -20,17 +13,33 @@ footer {
 	font-size: 0.9em;
 }
 
+.btn-primary {
+	background-color: #43613c;
+	border-color: #43613c;
+}
+
+.btn-primary:hover {
+	background-color: rgba(67, 97, 60, 0.5);
+	border-color: #43613c;	
+}
+
+.sticky-top {
+    position: sticky !important;
+    top: 0;
+    z-index: 1000;
+}
+
 /* Стиль для активного пункта меню */
 .navbar-nav .nav-link.active {
 	color: #fff !important;
-	background-color: #0d6efd;
+	background-color: #43613c;
 	border-radius: 5px;
 }
 
 /* Эффект при наведении на пункты меню */
 .navbar-nav .nav-link:hover {
 	color: #fff !important;
-	background-color: #0b5ed7;
+	background-color: rgba(67, 97, 60, 0.5);
 	border-radius: 5px;
 }
 
@@ -59,4 +68,94 @@ footer {
 /* Эффект при наведении на кнопку */
 .card-button:hover {
 	background-color: #555;
+}
+
+.logo-image {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+}
+
+/* Стили для закрепленной навигации */
+.sticky-nav {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background-color: #f8f9fa;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-nav .navbar {
+	padding: 0.5rem 1rem;
+}
+
+.sticky-nav .nav-link {
+	color: #333 !important;
+	font-weight: bold;
+}
+
+.sticky-nav .nav-link:hover {
+	color: #43613c !important;
+}
+
+/* Стили для кнопки "Наверх" */
+.back-to-top {
+	display: inline-block;
+	margin: 2rem auto;
+	padding: 0.5rem 1rem;
+	background-color: #43613c;
+	border-color: #43613c;
+	color: #fff;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+	background-color: rgba(67, 97, 60, 0.5);
+	border-color: #43613c;
+}
+
+/* Позиционирование кнопки "Наверх" */
+.back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+
+/* Отступы между секциями */
+.section-title {
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
+	font-size: 2rem;
+	color: #333;
+}
+
+.subsection-title {
+	margin-top: 1.5rem;
+	margin-bottom: 1rem;
+	font-size: 1.5rem;
+	color: #555;
+}
+
+.section-text {
+	margin-bottom: 1.5rem;
+	line-height: 1.6;
+	color: #444;
+}
+
+.section-list {
+	margin-bottom: 2rem;
+}
+
+.section-list-item {
+	margin-bottom: 1.5rem;
+}
+
+.section-image {
+	margin-top: 1rem;
+	margin-bottom: 1.5rem;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
