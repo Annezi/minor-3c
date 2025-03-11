@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}О программе{% endblock %}
+
+{% block content %}
+<h1>Я и моя образовательная программа</h1>
+
+<h2>Обо мне</h2>
+<img src="{% static data.student.photo %}" alt="{{ data.student.name }}" width="100">
+<p>Имя: {{ data.student.name }}</p>
+<p>Email: {{ data.student.email }}</p>
+<p>Телефон: {{ data.student.phone }}</p>
+
+<h2>Образовательная программа</h2>
+<p><strong>Название:</strong> {{ data.program.name }}</p>
+<p><strong>Описание:</strong> {{ data.program.description }}</p>
+
+<h3>Руководитель программы</h3>
+<img src="{% static data.program.leader.photo %}" alt="{{ data.program.leader.name }}" width="100">
+<p>Имя: {{ data.program.leader.name }}</p>
+<p>Email: {{ data.program.leader.email }}</p>
+
+<h3>Менеджер программы</h3>
+<img src="{% static data.program.manager.photo %}" alt="{{ data.program.manager.name }}" width="100">
+<p>Имя: {{ data.program.manager.name }}</p>
+<p>Email: {{ data.program.manager.email }}</p>
+
+<h2>Мои сокурсники</h2>
+{% for classmate in data.classmates %}
+<div>
+	<img src="{% static classmate.photo %}" alt="{{ classmate.name }}" width="100">
+	<p>Имя: {{ classmate.name }}</p>
+	<p>Email: {{ classmate.email }}</p>
+	<p>Телефон: {{ classmate.phone }}</p>
+</div>
+{% endfor %}
+{% endblock %}

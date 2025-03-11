@@ -1,0 +1,47 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+	<div class="container-fluid">
+		<!-- Логотип -->
+		<a class="navbar-brand" href="{% url 'home' %}">
+			<img src="{% static 'images/logo.jpg' %}" alt="Логотип" width="50">
+		</a>
+
+		<!-- Кнопка для мобильного меню -->
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Меню -->
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav me-auto">
+				<li class="nav-item">
+					<a class="nav-link {% if request.resolver_match.url_name == 'calligraphy' %}active{% endif %}"
+						href="{% url 'calligraphy' %}">Каллиграфия</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link {% if request.resolver_match.url_name == 'painting' %}active{% endif %}"
+						href="{% url 'painting' %}">Живопись</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link {% if request.resolver_match.url_name == 'porcelain' %}active{% endif %}"
+						href="{% url 'porcelain' %}">Фарфор</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'about' %}">О программе</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'task' %}">Решение задач</a>
+				</li>
+			</ul>
+
+			<!-- Ссылка на внешний сайт -->
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="https://www.namoc.org/en/" target="_blank">Внешний сайт</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

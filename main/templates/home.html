@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+<h1 class="text-center mb-4">Добро пожаловать на сайт о китайском искусстве!</h1>
+<p class="text-center mb-5">Здесь вы узнаете о различных видах китайского искусства: каллиграфии, живописи и фарфоре.
+</p>
+
+<!-- Раздел "О сайте" -->
+<h2 id="about">О сайте</h2>
+<p>Этот сайт посвящен китайскому искусству и его основным направлениям:</p>
+<ul>
+	<li>Каллиграфия:
+		<ul>
+			<li>Основы каллиграфии.</li>
+			<li>Виды каллиграфии.</li>
+		</ul>
+	</li>
+	<li>Живопись:
+		<ul>
+			<li>Особенности живописи.</li>
+			<li>Техники живописи.</li>
+		</ul>
+	</li>
+	<li>Фарфор:
+		<ul>
+			<li>История фарфора.</li>
+			<li>Виды фарфора.</li>
+		</ul>
+	</li>
+</ul>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+	<!-- Блок для каллиграфии -->
+	<div class="col">
+		<div class="card h-100">
+			<img src="{% static 'images/calligraphy_card.jpg' %}" alt="Китайская каллиграфия" class="card-img-top">
+			<div class="card-body">
+				<h5 class="card-title">Каллиграфия</h5>
+				<p class="card-text">Искусство красивого письма, которое отражает духовные и эстетические идеалы
+					китайской культуры.</p>
+				<a href="{% url 'calligraphy' %}" class="btn btn-primary">Узнать больше</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Блок для живописи -->
+	<div class="col">
+		<div class="card h-100">
+			<img src="{% static 'images/painting_card.jpg' %}" alt="Китайская живопись" class="card-img-top">
+			<div class="card-body">
+				<h5 class="card-title">Живопись</h5>
+				<p class="card-text">Традиционное искусство, включающее пейзажи, цветы, птиц и человеческие фигуры.</p>
+				<a href="{% url 'painting' %}" class="btn btn-primary">Узнать больше</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Блок для фарфора -->
+	<div class="col">
+		<div class="card h-100">
+			<img src="{% static 'images/porcelain_card.jpg' %}" alt="Китайский фарфор" class="card-img-top">
+			<div class="card-body">
+				<h5 class="card-title">Фарфор</h5>
+				<p class="card-text">Одно из величайших достижений китайской культуры, известное своей красотой и
+					качеством.</p>
+				<a href="{% url 'porcelain' %}" class="btn btn-primary">Узнать больше</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
